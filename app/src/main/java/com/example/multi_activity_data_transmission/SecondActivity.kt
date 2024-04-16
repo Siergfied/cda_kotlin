@@ -1,6 +1,9 @@
 package com.example.multi_activity_data_transmission
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -26,5 +29,15 @@ class SecondActivity : AppCompatActivity() {
 
         val company = findViewById<TextView>(R.id.company)
         company.text = intent.getStringExtra("company")
+
+
+        val button = findViewById<Button>(R.id.start_third_activity)
+        button.setOnClickListener {
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("name", name.text)
+            intent.putExtra("occupation", occupation.text)
+            intent.putExtra("company", company.text)
+            startActivity(intent)
+        }
     }
 }
