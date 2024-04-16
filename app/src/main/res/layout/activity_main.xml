@@ -12,10 +12,11 @@
 
 
     <TextView
+        android:id="@+id/label_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:labelFor="@id/input_name"
-        android:text="Name"
+        android:text="Please enter your Name"
         tools:ignore="HardcodedText" />
 
     <EditText
@@ -26,10 +27,11 @@
         android:autofillHints="" />
 
     <TextView
+        android:id="@+id/label_occupation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:labelFor="@id/input_occupation"
-        android:text="Occupation"
+        android:text="Please enter your Occupation"
         tools:ignore="HardcodedText" />
 
     <EditText
@@ -40,10 +42,11 @@
         android:autofillHints="" />
 
     <TextView
+        android:id="@+id/label_company"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:labelFor="@id/input_company"
-        android:text="Company"
+        android:text="Please enter your Company"
         tools:ignore="HardcodedText" />
 
     <EditText

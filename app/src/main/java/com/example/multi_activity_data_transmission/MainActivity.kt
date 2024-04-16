@@ -3,6 +3,7 @@ package com.example.multi_activity_data_transmission
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -19,9 +20,16 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        val name = findViewById<EditText>(R.id.input_name)
+        val occupation = findViewById<EditText>(R.id.input_occupation)
+        val company = findViewById<EditText>(R.id.input_company)
+
         val button = findViewById<Button>(R.id.start_second_activity)
         button.setOnClickListener{
             val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("name", name.getText().toString())
+            intent.putExtra("occupation", occupation.getText().toString())
+            intent.putExtra("company", company.getText().toString())
             startActivity(intent)
         }
     }

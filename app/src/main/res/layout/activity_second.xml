@@ -11,8 +11,49 @@
     tools:context=".SecondActivity">
 
     <TextView
+        android:id="@+id/label_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Second Activity" />
+        android:labelFor="@id/name"
+        android:text="Your Name"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/label_occupation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/occupation"
+        android:text="Your Occupation"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/occupation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/label_company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/company"
+        android:text="Your Company"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/company"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/start_third_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View my badge"
+        tools:ignore="HardcodedText" />
 
 </LinearLayout>
